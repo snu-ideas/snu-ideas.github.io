@@ -221,3 +221,20 @@ body { word-break: keep-all; overflow-wrap: break-word; }
 ul.cmeta { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-wrap: wrap; gap: 8px; }
 ul.cmeta li { background: var(--bg-alt); border: 1px solid var(--line); border-radius: 6px; padding: 5px 11px; font-size: 0.88rem; }
 ul.cmeta b { color: var(--muted); font-weight: 600; margin-right: 6px; }
+
+/* Justified body text with automatic hyphenation (English) */
+p, li, dd, td, ul.news span, figcaption {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+}
+/* keep short UI text left-aligned and unhyphenated */
+nav.main a, .btn, ul.tags li, ul.cmeta li, .kicker, h1, h2, h3, th,
+.recruit-list li, .timeline li, .filter button, footer.site, .pubyear, .brand {
+  text-align: left;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+.timeline .when, .recruit-list span { text-align: left; }
