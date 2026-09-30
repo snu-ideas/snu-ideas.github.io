@@ -238,3 +238,6 @@ nav.main a, .btn, ul.tags li, ul.cmeta li, .kicker, h1, h2, h3, th,
   hyphens: manual;
 }
 .timeline .when, .recruit-list span { text-align: left; }
+
+/* Blocks where justification would stretch word gaps too much (set by justify.js) */
+.ragged { text-align: left !important; }
