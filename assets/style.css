@@ -197,3 +197,12 @@ dl.facts { margin: 0; display: grid; grid-template-columns: 96px 1fr; gap: 10px 
 dl.facts dt { color: var(--muted); font-weight: 600; }
 dl.facts dd { margin: 0; }
 @media (max-width: 860px) { .course { grid-template-columns: 1fr; } ol.weeks { columns: 1; } }
+
+/* Courses table */
+table.courses td { font-size: 0.92rem; }
+table.courses .nowrap { white-space: nowrap; }
+table.courses .c { text-align: center; }
+table.courses .en { display: block; color: var(--navy-2); font-weight: 600; }
+table.courses .ko { display: block; color: var(--muted); font-size: 0.84rem; margin-top: 3px; }
+table.courses th:nth-child(2) { min-width: 220px; }
+table.courses th:nth-child(6) { min-width: 240px; }
