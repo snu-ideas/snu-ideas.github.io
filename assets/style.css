@@ -206,3 +206,18 @@ table.courses .en { display: block; color: var(--navy-2); font-weight: 600; }
 table.courses .ko { display: block; color: var(--muted); font-size: 0.84rem; margin-top: 3px; }
 table.courses th:nth-child(2) { min-width: 220px; }
 table.courses th:nth-child(6) { min-width: 240px; }
+
+/* Korean line breaking: keep words together */
+body { word-break: keep-all; overflow-wrap: break-word; }
+.recruit p.ko { text-wrap: balance; }
+
+/* Course cards */
+.courses { display: grid; gap: 20px; }
+.course-card { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: var(--radius); padding: 26px 28px; }
+.course-card .ctitle { font-size: 1.45rem; margin: 6px 0 2px; }
+.course-card .ctitle span { display: block; font-size: 1.05rem; color: var(--navy-2); font-weight: 600; margin-top: 2px; }
+.course-card .csub { color: var(--muted); margin: 4px 0 16px; }
+.course-card .cbook { color: var(--muted); font-size: 0.9rem; margin: 6px 0 0; }
+ul.cmeta { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+ul.cmeta li { background: var(--bg-alt); border: 1px solid var(--line); border-radius: 6px; padding: 5px 11px; font-size: 0.88rem; }
+ul.cmeta b { color: var(--muted); font-weight: 600; margin-right: 6px; }
