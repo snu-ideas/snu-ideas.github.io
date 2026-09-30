@@ -1,0 +1,150 @@
+/* IDEAS Lab — shared stylesheet */
+:root {
+  --navy: #0f2747;
+  --navy-2: #1b3a66;
+  --gold: #c9a227;
+  --gold-soft: #f4ecd2;
+  --ink: #1d2433;
+  --muted: #5b6475;
+  --line: #e3e7ee;
+  --bg: #ffffff;
+  --bg-alt: #f6f8fb;
+  --radius: 10px;
+  --max: 1080px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Inter", "Noto Sans KR", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 16px;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--navy-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+header.site {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(15, 39, 71, 0.97);
+  color: #fff;
+  border-bottom: 3px solid var(--gold);
+}
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; }
+.brand { color: #fff; display: flex; align-items: baseline; gap: 10px; }
+.brand:hover { text-decoration: none; }
+.brand b { font-family: "Source Serif 4", Georgia, serif; font-size: 1.5rem; letter-spacing: 0.06em; }
+.brand span { font-size: 0.82rem; color: #c8d3e6; }
+nav.main { display: flex; flex-wrap: wrap; gap: 4px; }
+nav.main a { color: #dfe6f2; padding: 6px 12px; border-radius: 6px; font-size: 0.95rem; }
+nav.main a:hover { background: rgba(255,255,255,0.1); text-decoration: none; }
+nav.main a.active { color: var(--navy); background: var(--gold); font-weight: 600; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; padding-top: 64px; padding-bottom: 64px; }
+.hero .eyebrow { color: var(--gold); letter-spacing: 0.18em; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
+.hero h1 { font-family: "Source Serif 4", Georgia, serif; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.15; margin: 10px 0 14px; }
+.hero h1 .acr { color: var(--gold); }
+.hero p.lead { color: #d5deec; font-size: 1.08rem; max-width: 36em; }
+.hero .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+.btn { display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; }
+.btn.gold { background: var(--gold); color: var(--navy); }
+.btn.ghost { border: 1px solid rgba(255,255,255,0.45); color: #fff; }
+.btn:hover { text-decoration: none; filter: brightness(1.06); }
+.hero svg { width: 100%; height: auto; }
+
+/* Page title band */
+.pagehead { background: var(--navy); color: #fff; padding: 44px 0 36px; border-bottom: 1px solid var(--navy-2); }
+.pagehead h1 { font-family: "Source Serif 4", Georgia, serif; margin: 0; font-size: clamp(1.8rem, 4vw, 2.5rem); }
+.pagehead p { margin: 6px 0 0; color: #c8d3e6; }
+
+/* Sections */
+section { padding: 56px 0; }
+section.alt { background: var(--bg-alt); }
+h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 1.75rem; margin: 0 0 8px; color: var(--navy); }
+h2 + .sub { color: var(--muted); margin: 0 0 28px; }
+h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--navy); }
+.kicker { color: var(--gold); font-weight: 700; letter-spacing: 0.14em; font-size: 0.78rem; text-transform: uppercase; }
+
+/* Grids and cards */
+.grid { display: grid; gap: 20px; }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.card.top { border-top: 4px solid var(--navy-2); }
+.card.gold { border-top: 4px solid var(--gold); }
+.card p { margin: 6px 0 0; color: var(--muted); font-size: 0.95rem; }
+.card .num { font-family: "Source Serif 4", Georgia, serif; font-size: 1.9rem; color: var(--gold); font-weight: 700; line-height: 1; }
+ul.tags { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+ul.tags li { background: var(--gold-soft); color: #6b5410; font-size: 0.78rem; padding: 3px 9px; border-radius: 999px; }
+
+.flow { color: var(--muted); font-style: italic; margin-bottom: 26px; }
+.flow b { color: var(--navy); font-style: normal; }
+
+/* Research feature rows */
+.feature { display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: center; padding: 34px 0; border-bottom: 1px solid var(--line); }
+.feature:last-child { border-bottom: 0; }
+.feature.rev { grid-template-columns: 1.1fr 1fr; }
+.feature.rev .txt { order: 2; }
+.feature figure { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; }
+.feature figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 8px; }
+.feature ul { padding-left: 1.1em; color: var(--muted); }
+
+/* News / lists */
+ul.news { list-style: none; margin: 0; padding: 0; }
+ul.news li { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px dashed var(--line); }
+ul.news time { color: var(--gold); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* Projects table */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--navy); color: #fff; font-weight: 600; }
+td .ko { display: block; color: var(--muted); font-size: 0.84rem; }
+.badge { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: var(--navy-2); color: #fff; white-space: nowrap; }
+.badge.g { background: var(--gold); color: var(--navy); }
+
+/* Publications */
+.pubyear { font-family: "Source Serif 4", Georgia, serif; color: var(--navy); font-size: 1.3rem; margin: 30px 0 6px; border-bottom: 2px solid var(--gold); display: inline-block; padding-right: 12px; }
+ol.pubs { margin: 0; padding-left: 1.4em; }
+ol.pubs li { margin: 10px 0; }
+ol.pubs .t { font-weight: 600; color: var(--ink); }
+ol.pubs .v { color: var(--muted); font-size: 0.92rem; }
+ol.pubs .me { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; font-weight: 600; }
+.filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.filter button { font: inherit; font-size: 0.88rem; border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 5px 14px; cursor: pointer; color: var(--ink); }
+.filter button.on { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+/* People */
+.pi { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; }
+.avatar { width: 220px; height: 260px; border-radius: var(--radius); background: linear-gradient(160deg, var(--navy-2), var(--navy)); color: var(--gold); display: flex; align-items: center; justify-content: center; font-family: "Source Serif 4", Georgia, serif; font-size: 3.4rem; font-weight: 700; }
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+.timeline li { position: relative; padding: 0 0 14px 20px; }
+.timeline li::before { content: ""; position: absolute; left: -7px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 3px solid var(--navy-2); }
+.timeline li.gold::before { border-color: var(--gold); }
+.timeline .when { font-size: 0.85rem; color: var(--muted); }
+
+/* Footer */
+footer.site { background: var(--navy); color: #c8d3e6; padding: 36px 0; font-size: 0.9rem; }
+footer.site .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+footer.site b { color: #fff; }
+footer.site a { color: var(--gold); }
+
+@media (max-width: 860px) {
+  .hero .wrap, .feature, .feature.rev, .pi { grid-template-columns: 1fr; }
+  .feature.rev .txt { order: 0; }
+  .g3, .g4 { grid-template-columns: repeat(2, 1fr); }
+  .avatar { width: 160px; height: 190px; font-size: 2.6rem; }
+}
+@media (max-width: 560px) {
+  .g2, .g3, .g4 { grid-template-columns: 1fr; }
+  ul.news li { grid-template-columns: 1fr; gap: 2px; }
+  header.site .wrap { padding-top: 8px; padding-bottom: 8px; }
+  nav.main a { padding: 4px 8px; font-size: 0.88rem; }
+}

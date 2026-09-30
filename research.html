@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | IDEAS Lab</title>
+<meta name="description" content="Research at IDEAS Lab: CAGD, hull form modeling, AI-integrated ship design and AI in shipbuilding.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html"><b>IDEAS Lab</b><span>Seoul National University</span></a>
+  <nav class="main"><a href="index.html">Home</a><a href="research.html" class="active">Research</a><a href="projects.html">Projects</a><a href="publications.html">Publications</a><a href="people.html">People</a><a href="teaching.html">Teaching</a></nav>
+</div></header>
+
+<div class="pagehead"><div class="wrap"><h1>Research</h1><p>From CAGD theory to AI integration in ship design and production</p></div></div>
+<section><div class="wrap">
+  <div class="flow"><b>Mathematical foundation in CAGD</b> → hull form modeling → AI-integrated hull form generation → AI applications in shipbuilding</div>
+  <div class="grid g4">
+    <div class="card top"><div class="kicker">Foundation</div><h3>CAGD Theory</h3><ul class="tags"><li>B-splines</li><li>T-splines</li><li>G¹ Bézier interpolation</li><li>T-junctions</li></ul></div>
+    <div class="card top"><div class="kicker">Modeling</div><h3>Hull Form Modeling</h3><ul class="tags"><li>Cp curve variation</li><li>Hydrostatic constraints</li><li>Section curves</li><li>Fairing</li></ul></div>
+    <div class="card top"><div class="kicker">Integration</div><h3>AI-Integrated Design</h3><ul class="tags"><li>Reinforcement learning</li><li>LLM agents</li><li>Function calling</li><li>ML resistance estimation</li></ul></div>
+    <div class="card top"><div class="kicker">Applications</div><h3>AI in Shipbuilding</h3><ul class="tags"><li>Corrosion detection</li><li>Outfitting automation</li><li>Maritime big data</li></ul></div>
+  </div>
+</div></section>
+<section class="alt"><div class="wrap">
+  <h2>Highlights</h2>
+<div class="feature" id="cagd">
+  <div class="txt"><div class="kicker">01 · CAGD Theory</div><h3 style="font-size:1.35rem">Surfaces over curve networks and T-splines</h3><p>Our foundation is the mathematics of free-form curves and surfaces. We developed methods to build G¹-continuous surfaces over boundary curve networks with T-junctions, and local T-spline surface skinning with shape preservation — the basis for representing complex hull geometry.</p><ul><li>Constructing Bézier surfaces over a boundary curve network with T-junctions (CAD, 2012)</li><li>Local T-spline surface skinning with shape preservation (CAD, 2018)</li><li>Bézier surface interpolation with T-junctions at a 3-valent singular vertex (CAGD, 2018)</li></ul></div>
+  <figure><img src="assets/img/tspline.jpg" alt="Surfaces over curve networks and T-splines"><figcaption>T-spline surface skinning.</figcaption></figure>
+</div><div class="feature rev" id="hullform">
+  <div class="txt"><div class="kicker">02 · Hull Form Modeling</div><h3 style="font-size:1.35rem">Hull form design and optimization process</h3><p>We apply CAGD to ship hull representation, modification and generation that satisfies design constraints. Our in-house hull design program supports hull form variation, surface generation and offset extraction, and is used with CFD, model tests and sea-trial data in an optimization loop developed with SNU partners and KRISO.</p><ul><li>Study on hull optimization process considering operational efficiency in waves (Processes, 2021)</li><li>Hull form reconstruction from insufficient data conforming to hydrostatic constraints (IJNAOE, 2026)</li></ul></div>
+  <figure><img src="assets/img/hull-program.jpg" alt="Hull form design and optimization process"><figcaption>In-house hull design program.</figcaption></figure>
+</div><div class="feature" id="cp">
+  <div class="txt"><div class="kicker">02 · Hull Form Modeling</div><h3 style="font-size:1.35rem">Direct prismatic coefficient variation</h3><p>Classic 1−Cp variation keeps section shapes but limits variety; editing sections by hand is slow. We vary Cp directly on the hull surface using free-form deformation and constrained interpolation, and use parametric Cp-curve functions to create hull forms with a parallel middle body intuitively.</p><ul><li>Direct prismatic coefficient variation to hull form surface (IJNAOE, 2024)</li><li>Intuitive hull form variation with a parallel middle body based on Cp curve modification (Ocean Engineering, 2025)</li><li>Entrance and run angle variations preserving the prismatic coefficient (IJNAOE, 2023)</li></ul></div>
+  <figure><img src="assets/img/cp-variation.jpg" alt="Direct prismatic coefficient variation"><figcaption>Original surface + Cp variation → final surface with target Cp.</figcaption></figure>
+</div><div class="feature rev" id="rl">
+  <div class="txt"><div class="kicker">03 · AI-Integrated Design</div><h3 style="font-size:1.35rem">Reinforcement learning for optimal hull forms</h3><p>An RL agent modifies fore and aft parts of the hull, receives total resistance as reward, and learns variations that reduce resistance while keeping principal particulars. PPO and DDPG agents reduced total resistance by about 2.5% in our case study.</p><ul><li>Reinforcement learning-based optimal hull form design with variations in fore and aft parts (JCDE, 2024)</li></ul></div>
+  <figure><img src="assets/img/rl-hullform.jpg" alt="Reinforcement learning for optimal hull forms"><figcaption>Agent–environment loop for hull form variation.</figcaption></figure>
+</div><div class="feature" id="llm">
+  <div class="txt"><div class="kicker">03 · AI-Integrated Design</div><h3 style="font-size:1.35rem">LLM agents with function calling</h3><p>An engineering agent turns a designer's request (e.g. “design a 320K VLCC with minimized resistance”) into intent and parameters, retrieves ship data with RAG, calls hull-variation functions in a geometry kernel, and checks performance with a CFD-based surrogate model — closing the loop automatically. This is the core of our NRF project (2026–2030).</p></div>
+  <figure><img src="assets/img/llm-agent.jpg" alt="LLM agents with function calling"><figcaption>Engineering agent system for intelligent hull form design.</figcaption></figure>
+</div><div class="feature rev" id="corrosion">
+  <div class="txt"><div class="kicker">04 · AI in Shipbuilding</div><h3 style="font-size:1.35rem">Corrosion area detection and depth prediction</h3><p>CNN-based models detect corroded areas in images and predict corrosion depth by mapping measured specimen thickness to detected regions, supporting inspection and safety diagnosis of marine structures.</p><ul><li>Corrosion area detection and depth prediction using machine learning (IJNAOE, 2024)</li></ul></div>
+  <figure><img src="assets/img/corrosion.jpg" alt="Corrosion area detection and depth prediction"><figcaption>Detection results on corrosion specimens and ship images.</figcaption></figure>
+</div><div class="feature" id="outfitting">
+  <div class="txt"><div class="kicker">04 · AI in Shipbuilding</div><h3 style="font-size:1.35rem">Outfitting design automation</h3><p>With KEIT support, we develop reinforcement-learning models for equipment arrangement and pipe routing combined with a digital knowledge base, to automate ship outfitting design (2023–2027).</p></div>
+  <figure><img src="assets/img/outfitting.jpg" alt="Outfitting design automation"><figcaption>Roadmap of the digital-knowledge-based outfitting design automation system.</figcaption></figure>
+</div>
+</div></section>
+<section id="vision"><div class="wrap">
+  <h2>Research plan</h2>
+  <p class="sub">Three active projects fuel a 5-year mid-term plan, evolving toward a 10-year vision.</p>
+  <div class="grid g2">
+    <div class="card gold"><div class="kicker">Mid-term · within 5 years</div><h3>LLM-based early ship design automation framework</h3>
+      <ul><li><b>LLM agent deepening</b> — complete the NRF project and expand function-calling capabilities</li>
+      <li><b>ML resistance estimation</b> — continue ML-based hull form performance and optimization research</li>
+      <li><b>Smart shipyard AI</b> — apply AI to shipyard problems beyond design</li>
+      <li><b>Industry impact</b> — reduce designer effort and strengthen shipbuilding competitiveness</li></ul></div>
+    <div class="card top"><div class="kicker">Long-term · 10 years and beyond</div><h3>Intuitive design + integrated design–production automation</h3>
+      <ul><li><b>Non-expert accessible design</b> — ship design systems usable by non-specialists</li>
+      <li><b>Design–production integration</b> — 3D models linked to welding robots toward full automation</li>
+      <li><b>Production automation robotics</b> — building on doctoral welding-robot work, toward humanoid robots</li>
+      <li><b>Next-generation CAD kernel</b> — kernel R&amp;D and legacy data conversion for shipyard CAD transition</li>
+      <li><b>Foundational CAGD research</b> — B-spline and T-spline theory with international collaborators</li></ul></div>
+  </div>
+</div></section>
+<footer class="site"><div class="wrap">
+  <div><b>IDEAS Lab</b> — Integrated Design, Engineering &amp; Automation for Systems<br>
+  Department of Naval Architecture and Ocean Engineering, Seoul National University<br>
+  1 Gwanak-ro, Gwanak-gu, Seoul 08826, Republic of Korea</div>
+  <div>
+  <!-- TODO: 서울대 이메일 주소로 교체하세요 -->
+  PI: Prof. Min-Jae Oh<br>
+  <a href="people.html#contact">Contact &amp; joining the lab</a><br>
+  © 2026 IDEAS Lab</div>
+</div></footer>
+</body>
+</html>
