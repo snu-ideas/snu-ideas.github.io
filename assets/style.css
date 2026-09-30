@@ -265,5 +265,3 @@ p, li, dd, td, th, figcaption, ul.news span, .recruit-list span { text-align: le
   .brand .brand-sep { height: 20px; }
   .brand .brand-univ { display: inline; font-size: 0.6rem; letter-spacing: 0.1em; }
 }
-/* card descriptions: justified too (justify.js falls back to left when gaps get too wide) */
-.card p { text-align: justify; text-align-last: left; text-justify: inter-word; }
