@@ -3,7 +3,7 @@
    between words on each line (except the last). If any line would be stretched
    too much, fall back to normal left-aligned text for that block. */
 (function () {
-  var SEL = 'p, li, dd, td, ul.news span, figcaption';
+  var SEL = '.body-text';
   var MAX_EXTRA_EM = 0.45;   // max extra space per word gap, in em
 
   function measure(el) {
