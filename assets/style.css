@@ -180,3 +180,6 @@ h3.role { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; 
 .recruit-list span { color: #3d3312; font-size: 0.93rem; }
 .recruit-list a { color: var(--navy); font-weight: 600; }
 @media (max-width: 860px) { .recruit .wrap { grid-template-columns: 1fr; } }
+
+/* Video */
+.feature figure video { width: 100%; height: auto; display: block; border-radius: 6px; background: #0f2747; }
