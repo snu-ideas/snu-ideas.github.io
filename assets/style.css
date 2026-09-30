@@ -241,3 +241,10 @@ nav.main a, .btn, ul.tags li, ul.cmeta li, .kicker, h1, h2, h3, th,
 
 /* Blocks where justification would stretch word gaps too much (set by justify.js) */
 .ragged { text-align: left !important; }
+
+/* Hero title: fixed line breaks, common left edge */
+.hero .eyebrow, .hero h1.hero-title { text-align: left; margin-left: 0; padding-left: 0; }
+.hero h1.hero-title { white-space: nowrap; }
+@media (max-width: 380px) { .hero h1.hero-title { white-space: normal; } }
+.hero .eyebrow { white-space: nowrap; }
+@media (max-width: 480px) { .hero .eyebrow { letter-spacing: 0.08em; font-size: 0.7rem; } }
