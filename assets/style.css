@@ -250,7 +250,7 @@ p, li, dd, td, th, figcaption, ul.news span, .recruit-list span { text-align: le
   .works > .card { grid-row: span 3; grid-template-rows: subgrid; }
   .works > .card h3 { min-height: 0; }
 }
-@media (max-width: 860px) {
+@media (max-width: 560px) {
   .works > .card { grid-row: auto; grid-template-rows: 190px auto auto; }
   .works > .card h3 { min-height: 0; }
 }
