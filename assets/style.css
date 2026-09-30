@@ -154,3 +154,11 @@ footer.site a { color: var(--gold); }
 .brand { align-items: center; }
 footer.site .flogo { width: 300px; max-width: 100%; height: auto; margin-bottom: 10px; }
 @media (max-width: 560px) { .brand img { height: 24px; } .brand span { display: none; } }
+
+/* Photos & members */
+img.avatar.photo { object-fit: cover; object-position: top; background: none; }
+h3.role { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 26px 0 14px; }
+.member { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: start; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.member > img { width: 150px; height: 190px; object-fit: cover; object-position: top; border-radius: 8px; }
+.member .pos { margin: 2px 0 0; color: var(--muted); font-size: 0.95rem; }
+@media (max-width: 560px) { .member { grid-template-columns: 1fr; } .member > img { width: 130px; height: 165px; } }
