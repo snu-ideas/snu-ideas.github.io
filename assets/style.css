@@ -177,7 +177,7 @@ h3.role { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; 
 .recruit-list li { padding: 14px 20px; border-bottom: 1px solid rgba(15,39,71,0.12); display: flex; flex-direction: column; }
 .recruit-list li:last-child { border-bottom: 0; }
 .recruit-list b { color: var(--navy); }
-.recruit-list span { color: #3d3312; font-size: 0.93rem; }
+.recruit-list li > span { color: #3d3312; font-size: 0.93rem; }
 .recruit-list a { color: var(--navy); font-weight: 600; }
 @media (max-width: 860px) { .recruit .wrap { grid-template-columns: 1fr; } }
 
@@ -265,3 +265,5 @@ p, li, dd, td, th, figcaption, ul.news span, .recruit-list span { text-align: le
   .brand .brand-sep { height: 20px; }
   .brand .brand-univ { display: inline; font-size: 0.6rem; letter-spacing: 0.1em; }
 }
+/* card descriptions: justified too (justify.js falls back to left when gaps get too wide) */
+.card p { text-align: justify; text-align-last: left; text-justify: inter-word; }
