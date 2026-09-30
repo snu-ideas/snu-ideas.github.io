@@ -237,3 +237,20 @@ p, li, dd, td, th, figcaption, ul.news span, .recruit-list span { text-align: le
 .hero .eyebrow { white-space: nowrap; }
 @media (max-width: 480px) { .hero .eyebrow { letter-spacing: 0.08em; font-size: 0.7rem; } }
 .nw { white-space: nowrap; }
+
+/* Home · Selected work: equal image boxes, aligned titles and descriptions */
+.works { align-items: stretch; }
+.works > .card { display: grid; grid-template-rows: 190px auto 1fr; row-gap: 0; }
+.works .work-img { height: 190px; display: flex; align-items: center; justify-content: center; background: #fff; }
+.works .work-img img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.works > .card h3 { margin: 14px 0 0; min-height: calc(2 * 1.65em); }
+.works > .card p { margin-top: 6px; }
+@supports (grid-template-rows: subgrid) {
+  .works { grid-template-rows: auto auto auto; }
+  .works > .card { grid-row: span 3; grid-template-rows: subgrid; }
+  .works > .card h3 { min-height: 0; }
+}
+@media (max-width: 860px) {
+  .works > .card { grid-row: auto; grid-template-rows: 190px auto auto; }
+  .works > .card h3 { min-height: 0; }
+}
