@@ -183,3 +183,17 @@ h3.role { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; 
 
 /* Video */
 .feature figure video { width: 100%; height: auto; display: block; border-radius: 6px; background: #0f2747; }
+
+/* Smaller research videos */
+.feature figure video { max-height: 240px; width: auto; max-width: 100%; margin: 0 auto; }
+
+/* Course */
+.course { display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px; align-items: start; margin-top: 10px; }
+.course p { color: var(--ink); }
+ol.weeks { list-style: none; padding: 0; margin: 10px 0 0; columns: 2; column-gap: 28px; }
+ol.weeks li { break-inside: avoid; padding: 7px 0; border-bottom: 1px dashed var(--line); font-size: 0.94rem; display: flex; gap: 10px; }
+ol.weeks .wk { color: var(--gold); font-weight: 700; min-width: 34px; font-variant-numeric: tabular-nums; }
+dl.facts { margin: 0; display: grid; grid-template-columns: 96px 1fr; gap: 10px 12px; font-size: 0.93rem; }
+dl.facts dt { color: var(--muted); font-weight: 600; }
+dl.facts dd { margin: 0; }
+@media (max-width: 860px) { .course { grid-template-columns: 1fr; } ol.weeks { columns: 1; } }
